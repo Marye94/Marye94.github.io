@@ -1,0 +1,96 @@
+{
+    "contact_information": {
+        "name": "Mariella Lorenzo Suarez",
+        "email": "marye94.lorenzo@gmail.com",
+        "linkedin": "maryelorenzo",
+        "github": "Marye94",
+        "location": "Brossard, Canada"
+    },
+    "experience": [
+        {
+            "title": "QA Engineer",
+            "company": "SwagUp",
+            "location": "Remote",
+            "duration": "Feb 2021 – Present",
+            "responsibilities": [
+                "Led comprehensive testing across the SDLC, championing high standards. Pioneered innovative test suites using Google Sheets to streamline processes, boosting team efficiency by 30%.",
+                "Collaborated closely with cross-functional teams to integrate testing seamlessly throughout the development process.",
+                "Enhanced test coverage and API functionality by conducting thorough reviews and analyses of system specifications. Developed and documented clear, concise, and executable test cases. Utilized tools like Postman and Swagger for robust API design and validation, proactively identifying potential issues.",
+                "Promoted a culture of continuous improvement through meticulous defect management and collaborative resolution. Provided constructive feedback to developers and designers, fostering a positive development environment.",
+                "Exploration of automation testing tools and methodologies is currently underway. The initial test repository is being developed using Cypress with JavaScript to optimize end-to-end testing processes."
+            ]
+        },
+        {
+            "title": "Software Engineer",
+            "company": "SwagUp",
+            "location": "Remote",
+            "duration": "Jun 2022 – Jan 2023",
+            "responsibilities": [
+                "Developed and maintained a robust .NET web service application using ASP.NET Core, prioritizing clean code practices and modularity for efficient development and maintenance.",
+                "Enhanced software quality through proactive participation in code reviews. Identified and communicated potential technical issues and process inefficiencies, fostering a collaborative approach that prevented defects and refined the development workflow.",
+                "Leveraged PostgreSQL to generate insightful reports. Analyzed data to identify areas for performance optimization and potential bug hotspots, contributing to a more efficient and reliable application."
+            ]
+        },
+        {
+            "title": "Service Desk Analyst",
+            "company": "SwagUp",
+            "location": "Remote",
+            "duration": "Sep 2021 – Feb 2022",
+            "responsibilities": [
+                "Championed efficient issue resolution by actively analyzing user reports and identifying key patterns and potential causes of ambiguous technical problems. This facilitated clearer communication with developers and expedited the resolution process.",
+                "Collaborated effectively with developers and other teams to escalate critical issues, contributing to overall software quality improvement.",
+                "Demonstrated a commitment to continuous learning by actively seeking out additional tasks and project roles within the team."
+            ]
+        },
+        {
+            "title": "Consultant Quality Assurance Engineer",
+            "company": "Liberty Power",
+            "location": "Remote",
+            "duration": "Apr 2019 – Jan 2021",
+            "responsibilities": [
+                "Spearheaded high-quality software releases by leveraging extensive QA expertise. Performed a variety of testing methods (exploratory, smoke, functional, API, integration, regression) to ensure all functionalities met established user and acceptance criteria.",
+                "Enhanced user experience by proactively utilizing SQL scripting for performance testing and recommending improvements to the software team.",
+                "Ensured timely software releases through meticulous identification and documentation of critical issues. Collaborated effectively with development teams to determine root causes and facilitate swift resolution."
+            ]
+        },
+        {
+            "title": "Student Assistant",
+            "company": "University of Havana",
+            "location": "Havana, Cuba",
+            "duration": "Sep 2014 – Jul 2017",
+            "responsibilities": [
+                "Supported conference preparation by conducting thorough research and verifying information and data integrity.",
+                "Empowered student success by assisting in managing academic affairs, identifying and resolving record discrepancies.",
+                "Developed and delivered engaging educational content on Database Design methodologies (ER Modeling, Logic Modeling, Physical Modeling, SQL)."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Codemify Bootcamp",
+            "details": "Software Testing",
+            "location": "Online",
+            "duration": "Apr 2024 - Aug 2024"
+        },
+        {
+            "institution": "University of Havana",
+            "details": "B.Sc. in Computer Science",
+            "location": "Havana, Cuba",
+            "duration": "Jun 2018"
+        }
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "level": "Professional proficiency"
+        },
+        {
+            "name": "Spanish",
+            "level": "Native"
+        },
+        {
+            "name": "French",
+            "level": "Intermediate"
+        }
+    ]
+}
