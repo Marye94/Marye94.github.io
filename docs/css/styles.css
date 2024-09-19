@@ -59,3 +59,13 @@ section {
 .single-line-footer p {
     margin: 0 10px;
 }
+
+/* Tooltip styling */
+a[title] {
+    position: relative;
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+}
