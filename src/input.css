@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .test-case-header {
+    @apply bg-primary text-white py-8 px-6 shadow-md;
+  }
+  
+  .test-metadata {
+    @apply bg-opacity-10 bg-white rounded-lg p-4 mt-4;
+  }
+  
+  .test-status {
+    @apply inline-block px-3 py-1 rounded bg-success text-white text-sm mt-4;
+  }
+  
+  .section-card {
+    @apply bg-white rounded-xl shadow-sm p-6 my-8 mx-auto max-w-3xl 
+           hover:shadow-md transition-shadow duration-300
+           animate-fade-in;
+  }
+  
+  .skill-bar {
+    @apply w-full bg-gray-100 rounded-full h-5 mb-4 overflow-hidden;
+  }
+  
+  .skill-progress {
+    @apply h-full bg-gradient-to-r from-secondary to-success 
+           relative transition-all duration-1000;
+  }
+  
+  .skill-label {
+    @apply absolute left-3 top-1/2 transform -translate-y-1/2 
+           text-white text-sm font-mono;
+  }
+  
+  .terminal-text {
+    @apply font-mono text-success bg-gray-50 p-2 rounded;
+  }
+  
+  .nav-link {
+    @apply text-white opacity-80 hover:opacity-100 transition-opacity;
+  }
+}

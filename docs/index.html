@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mariella - QA Engineer</title>
+    <title>Mariella Lorenzo Suarez - QA Engineer</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <script src="js/scripts.js"></script>
     <meta
       name="description"
@@ -19,29 +19,42 @@
       content="QA Engineer, Mariella Lorenzo Suarez, Software Testing, Automation Testing, Manual Testing"
     />
     <meta name="author" content="Mariella Lorenzo Suarez" />
+    <!-- Typing effect library -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="js/animations.js"></script>
   </head>
 
   <body>
-    <header>
-      <h1>Test Case ID: CV-001</h1>
+    <header class="test-case-header">
+      <h1 class="font-mono text-2xl font-bold mb-4">Test Case ID: CV-001</h1>
+      <div class="test-metadata">
+        <p class="mb-2"><strong class="text-secondary">Title:</strong> QA Engineer Profile - Mariella Lorenzo Suarez</p>
+        <p class="mb-2"><strong class="text-secondary">Author:</strong> Mariella Lorenzo Suarez</p>
+        <p class="mb-2"><strong class="text-secondary">Last Updated:</strong> Sep 2024</p>
+        <p class="mb-2"><strong class="text-secondary">Test Environment:</strong> Professional Work Environment</p>
+        <p class="mb-2"><strong class="text-secondary">Test Type:</strong> Career Profile Validation</p>
+        <span class="test-status animate-pulse">ACTIVE</span>
+      </div>
+      <div class="header-cta">
+        <a href="data/2024.09.18 CV MLS - Short Version.pdf" download class="download-btn">
+          <i class="fas fa-file-download"></i> Download Test Documentation
+        </a>
+      </div>
     </header>
 
     <main>
       <section id="profile">
-        <h2>
-          <a
-            href="data/2024.09.18 CV MLS - Short Version.pdf"
-            download
-            title="Click to download my resume in PDF format">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          Title: QA Engineer - Mariella Lorenzo Suarez
-        </h2>
-        <p>
-          <strong>Objective:</strong> To provide a comprehensive overview of the
-          skills, experience, and qualifications of Mariella as a QA Engineer.
-        </p>
-      </section>
+        <div class="profile-header">
+          <h2>Test Objective</h2>
+          <div class="profile-links">
+            <a href="https://github.com/Marye94" target="_blank" title="Code Repository">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/maryelorenzo" target="_blank" title="Professional Network">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
 
       <section id="introduction">
         <h2>Introduction</h2>
@@ -89,18 +102,58 @@
         </p>
       </section>
 
-      <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-          <li>
-            <strong>Testing Skills:</strong> Manual Testing, Automation Testing
-          </li>
-          <li><strong>Programming Languages:</strong> C#, JavaScript</li>
-          <li><strong>Tools:</strong> Cypress, JIRA, Postman</li>
-          <li><strong>Frameworks:</strong> TestNG, JUnit, Maven</li>
-          <li><strong>Web Technologies:</strong> HTML, CSS</li>
-          <li><strong>Version Control:</strong> Git</li>
-        </ul>
+      <section id="skills" class="section-card">
+        <h2 class="text-2xl font-bold text-primary mb-6">Technical Skills Assessment</h2>
+        <div class="terminal-text mb-6">
+          <span class="typing-text"></span>
+        </div>
+        
+        <h3 class="text-xl font-semibold text-primary mb-4">Testing Skills</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 95%">
+            <span class="skill-label">Manual Testing - 95%</span>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 85%">
+            <span class="skill-name">Automation Testing</span>
+            <span class="skill-percentage">85%</span>
+          </div>
+        </div>
+
+        <h3>Programming Languages</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 80%">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percentage">80%</span>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 75%">
+            <span class="skill-name">C#</span>
+            <span class="skill-percentage">75%</span>
+          </div>
+        </div>
+
+        <h3>Tools & Frameworks</h3>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 90%">
+            <span class="skill-name">Cypress</span>
+            <span class="skill-percentage">90%</span>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 85%">
+            <span class="skill-name">JIRA</span>
+            <span class="skill-percentage">85%</span>
+          </div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 80%">
+            <span class="skill-name">Postman</span>
+            <span class="skill-percentage">80%</span>
+          </div>
+        </div>
       </section>
 
       <section id="experience">
