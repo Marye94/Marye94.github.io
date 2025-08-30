@@ -42,177 +42,415 @@
   </head>
 
   <body>
-    <header class="bg-gradient-to-r from-primary to-gray-800 text-white py-12 px-6 shadow-lg">
-      <div class="max-w-4xl mx-auto">
-        <div class="flex items-center space-x-2 font-mono mb-6">
-          <span class="text-success">></span>
-          <h1 class="text-2xl font-bold">Test Case ID: CV-001</h1>
+    <header class="bg-gradient-to-r from-primary via-gray-800 to-primary text-white py-12 px-6 shadow-xl relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="max-w-4xl mx-auto relative z-10">
+        <div class="flex items-center space-x-3 font-mono mb-8 bg-black/30 p-3 rounded-lg inline-block">
+          <span class="text-success text-xl animate-pulse">></span>
+          <h1 class="text-2xl font-bold tracking-tight">Test Case ID: CV-001</h1>
         </div>
         
-        <div class="bg-black/20 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <p class="flex items-center space-x-2">
-              <span class="text-gray-400">Title:</span>
-              <span>QA Engineer Profile - Mariella Lorenzo Suarez</span>
-            </p>
-            <p class="flex items-center space-x-2">
-              <span class="text-gray-400">Author:</span>
-              <span>Mariella Lorenzo Suarez</span>
-            </p>
-            <p class="flex items-center space-x-2">
-              <span class="text-gray-400">Last Updated:</span>
-              <span>Sep 2024</span>
-            </p>
-            <p class="flex items-center space-x-2">
-              <span class="text-gray-400">Environment:</span>
-              <span>Professional Work Environment</span>
-            </p>
+        <div class="bg-black/30 backdrop-blur-md rounded-xl p-8 border border-white/20 shadow-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg">
+              <span class="text-gray-400 font-mono">Title:</span>
+              <span class="text-white/90">QA Engineer Profile - Mariella Lorenzo Suarez</span>
+            </div>
+            <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg">
+              <span class="text-gray-400 font-mono">Author:</span>
+              <span class="text-white/90">Mariella Lorenzo Suarez</span>
+            </div>
+            <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg">
+              <span class="text-gray-400 font-mono">Last Updated:</span>
+              <span class="text-white/90">Aug 2025</span>
+            </div>
+            <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg">
+              <span class="text-gray-400 font-mono">Environment:</span>
+              <span class="text-white/90">Professional Work Environment</span>
+            </div>
           </div>
-          <div class="mt-4 flex items-center justify-between">
-            <p class="flex items-center space-x-2">
-              <span class="text-gray-400">Test Type:</span>
-              <span>Career Profile Validation</span>
-            </p>
-            <span class="inline-flex items-center px-3 py-1 rounded-full bg-success/90 text-white text-sm font-mono">
+          
+          <div class="mt-6 flex items-center justify-between bg-white/5 p-4 rounded-lg">
+            <div class="flex items-center space-x-3">
+              <span class="text-gray-400 font-mono">Test Type:</span>
+              <span class="text-white/90">Career Profile Validation</span>
+            </div>
+            <span class="inline-flex items-center px-4 py-2 rounded-full bg-success shadow-lg text-white text-sm font-mono border border-success/30">
               <span class="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
               ACTIVE
             </span>
           </div>
         </div>
-      <div class="header-cta">
-        <a href="data/2024.09.18 CV MLS - Short Version.pdf" download class="download-btn">
-          <i class="fas fa-file-download"></i> Download Test Documentation
-        </a>
+        
+        <div class="mt-8 flex justify-end">
+          <a href="data/2024.09.18 CV MLS - Short Version.pdf" download 
+             class="group flex items-center space-x-3 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl 
+                    transition-all duration-300 border border-white/20 hover:border-white/40 shadow-lg hover:shadow-xl">
+            <i class="fas fa-file-download text-xl group-hover:scale-110 transition-transform"></i>
+            <span class="font-medium">Download Test Documentation</span>
+          </a>
+        </div>
       </div>
     </header>
 
     <main class="container mx-auto px-4 py-8">
-      <section id="profile" class="bg-white rounded-lg shadow-sm p-6 mb-8">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-bold text-primary">Test Objective</h2>
-          <div class="flex space-x-4">
-            <a href="https://github.com/Marye94" target="_blank" title="Code Repository" class="text-2xl text-gray-700 hover:text-primary transition-colors">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/maryelorenzo" target="_blank" title="Professional Network" class="text-2xl text-gray-700 hover:text-primary transition-colors">
-              <i class="fab fa-linkedin"></i>
-            </a>
+      <section id="profile" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-clipboard-check text-2xl text-primary"></i>
           </div>
-        </div>
-
-      <section id="introduction">
-        <h2>Introduction</h2>
-        <h3>Test Document Overview</h3>
-        <p>
-          This document provides a detailed overview of Mariella's skills,
-          experience, and qualifications as a QA Engineer. It includes
-          information on her technical skills, professional experience,
-          education and languages. The document aims to provide potential
-          employers with a comprehensive understanding of Mariella's
-          capabilities and expertise in the field of software testing.
-        </p>
-
-        <h3>Scope</h3>
-        <p>The scope of this document includes de following sections:</p>
-        <ul>
-          <li><a href="#contact_information">Contact Information</a></li>
-          <li><a href="#summary">Summary</a></li>
-          <li><a href="#skills">Technical Skills</a></li>
-          <li><a href="#experience">Professional Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#languages">Languages</a></li>
-        </ul>
-      </section>
-
-      <section id="contact_information">
-        <h2>Contact Information</h2>
-        <ul id="contact-information-content"></ul>
-      </section>
-
-      <section id="summary">
-        <h2>Personal Profile</h2>
-        <p>
-          Enthusiastic QA professional with a strong foundation in manual
-          testing methodologies and actively transitioning my skills to
-          automation testing. Demonstrated initiative by building the first test
-          repository in my current role at SwagUp, using Cypress and Javascript
-          to optimize end-to-end testing processes. Thrive in collaborative
-          environments and actively seek feedback to continuously improve my
-          skills and expand my automation knowledge. I am currently dedicated to
-          achieving the ISTQB certification, which will significantly enhance my
-          expertise in software testing. Eager to contribute my technical
-          prowess to a challenging QA Engineer role and help build robust
-          software solutions.
-        </p>
-      </section>
-
-      <section id="skills" class="section-card">
-        <h2 class="text-2xl font-bold text-primary mb-6">Technical Skills Assessment</h2>
-        <div class="terminal-text mb-6">
-          <span class="typing-text"></span>
+          <h2 class="text-2xl font-bold text-primary">Test Objective</h2>
         </div>
         
-        <h3 class="text-xl font-semibold text-primary mb-4">Testing Skills</h3>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 95%">
-            <span class="skill-label">Manual Testing - 95%</span>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 85%">
-            <span class="skill-name">Automation Testing</span>
-            <span class="skill-percentage">85%</span>
-          </div>
-        </div>
-
-        <h3>Programming Languages</h3>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 80%">
-            <span class="skill-name">JavaScript</span>
-            <span class="skill-percentage">80%</span>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 75%">
-            <span class="skill-name">C#</span>
-            <span class="skill-percentage">75%</span>
-          </div>
-        </div>
-
-        <h3>Tools & Frameworks</h3>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 90%">
-            <span class="skill-name">Cypress</span>
-            <span class="skill-percentage">90%</span>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 85%">
-            <span class="skill-name">JIRA</span>
-            <span class="skill-percentage">85%</span>
-          </div>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 80%">
-            <span class="skill-name">Postman</span>
-            <span class="skill-percentage">80%</span>
+        <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <span class="mt-1.5 text-success">✓</span>
+              <p class="text-gray-700">Validate candidate's qualifications and expertise in Quality Assurance Engineering</p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <span class="mt-1.5 text-success">✓</span>
+              <p class="text-gray-700">Assess technical proficiency in manual and automated testing methodologies</p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <span class="mt-1.5 text-success">✓</span>
+              <p class="text-gray-700">Evaluate experience with industry-standard testing tools and frameworks</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="experience" class="bg-white rounded-lg shadow-sm p-6 mb-8">
-        <h2 class="text-2xl font-bold text-primary mb-6">Experience</h2>
-        <div id="experience-content" class="space-y-6"></div>
+      <section id="introduction" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-file-alt text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Test Documentation</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-6">
+            <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+              <h3 class="text-xl font-semibold text-primary mb-4 flex items-center">
+                <i class="fas fa-info-circle mr-2 text-secondary"></i>
+                Document Overview
+              </h3>
+              <p class="text-gray-600">
+                This comprehensive test document evaluates Mariella Lorenzo Suarez's qualifications
+                and expertise as a QA Engineer. Through detailed analysis of skills, experience,
+                and technical proficiency, it provides evidence of her capabilities in software testing
+                and quality assurance.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+              <h3 class="text-xl font-semibold text-primary mb-4 flex items-center">
+                <i class="fas fa-list-check mr-2 text-secondary"></i>
+                Test Requirements
+              </h3>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex items-start space-x-3">
+                  <span class="text-success mt-1">✓</span>
+                  <span>Technical competency validation</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <span class="text-success mt-1">✓</span>
+                  <span>Project experience assessment</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <span class="text-success mt-1">✓</span>
+                  <span>Educational background verification</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+            <h3 class="text-xl font-semibold text-primary mb-4 flex items-center">
+              <i class="fas fa-sitemap mr-2 text-secondary"></i>
+              Document Structure
+            </h3>
+            <div class="space-y-4">
+              <div class="bg-white rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
+                <a href="#contact_information" class="flex items-center space-x-3 text-gray-700 hover:text-secondary">
+                  <i class="fas fa-address-card"></i>
+                  <span>Contact Information</span>
+                </a>
+              </div>
+              <div class="bg-white rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
+                <a href="#summary" class="flex items-center space-x-3 text-gray-700 hover:text-secondary">
+                  <i class="fas fa-user"></i>
+                  <span>Professional Summary</span>
+                </a>
+              </div>
+              <div class="bg-white rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
+                <a href="#skills" class="flex items-center space-x-3 text-gray-700 hover:text-secondary">
+                  <i class="fas fa-code"></i>
+                  <span>Technical Skills</span>
+                </a>
+              </div>
+              <div class="bg-white rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
+                <a href="#experience" class="flex items-center space-x-3 text-gray-700 hover:text-secondary">
+                  <i class="fas fa-briefcase"></i>
+                  <span>Professional Experience</span>
+                </a>
+              </div>
+              <div class="bg-white rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
+                <a href="#education" class="flex items-center space-x-3 text-gray-700 hover:text-secondary">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>Education</span>
+                </a>
+              </div>
+              <div class="bg-white rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
+                <a href="#languages" class="flex items-center space-x-3 text-gray-700 hover:text-secondary">
+                  <i class="fas fa-language"></i>
+                  <span>Language Proficiency</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="education" class="bg-white rounded-lg shadow-sm p-6 mb-8">
-        <h2 class="text-2xl font-bold text-primary mb-6">Education</h2>
-        <div id="education-content" class="space-y-4"></div>
+      <section id="contact_information" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-8">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-address-card text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Contact Details</h2>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <ul id="contact-information-content" class="space-y-4"></ul>
+            <div class="flex justify-center md:justify-end space-x-4 items-start">
+              <a href="https://github.com/Marye94" target="_blank" 
+                 class="bg-gray-900 text-white p-4 rounded-lg hover:bg-gray-800 transition-colors group">
+                <i class="fab fa-github text-2xl group-hover:scale-110 transition-transform"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/maryelorenzo" target="_blank"
+                 class="bg-[#0077b5] text-white p-4 rounded-lg hover:bg-[#006399] transition-colors group">
+                <i class="fab fa-linkedin-in text-2xl group-hover:scale-110 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="languages" class="bg-white rounded-lg shadow-sm p-6 mb-8">
-        <h2 class="text-2xl font-bold text-primary mb-6">Languages</h2>
-        <div id="languages-content" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+      <section id="summary" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-user-check text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Test Subject Profile</h2>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-success/10 p-2 rounded flex-shrink-0">
+                <i class="fas fa-check text-success"></i>
+              </div>
+              <div class="ml-4 flex-1">
+                <p class="text-gray-700">
+                  <span class="font-medium text-gray-900">Core Competency:</span> Enthusiastic QA professional
+                  with a strong foundation in manual testing methodologies, actively transitioning to automation testing.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="bg-success/10 p-2 rounded mt-1">
+                <i class="fas fa-check text-success"></i>
+              </div>
+              <p class="text-gray-700 flex-1">
+                <span class="font-medium text-gray-900">Key Achievement:</span> Demonstrated initiative by building
+                the first test repository at SwagUp, implementing Cypress and Javascript for optimized end-to-end testing processes.
+              </p>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="bg-success/10 p-2 rounded mt-1">
+                <i class="fas fa-check text-success"></i>
+              </div>
+              <p class="text-gray-700 flex-1">
+                <span class="font-medium text-gray-900">Professional Development:</span> Currently pursuing ISTQB
+                certification to enhance expertise in software testing methodologies and best practices.
+              </p>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="bg-success/10 p-2 rounded mt-1">
+                <i class="fas fa-check text-success"></i>
+              </div>
+              <p class="text-gray-700 flex-1">
+                <span class="font-medium text-gray-900">Soft Skills:</span> Thrives in collaborative environments,
+                actively seeks feedback, and demonstrates continuous learning and improvement mindset.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-8">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-code-branch text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Technical Skills Assessment</h2>
+        </div>
+
+        <div class="space-y-8">
+          <div class="skill-category">
+            <h3 class="text-xl font-semibold text-primary mb-6 flex items-center">
+              <i class="fas fa-vial mr-3 text-secondary"></i>
+              Testing Skills
+            </h3>
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">Manual Testing</span>
+                  <span class="text-secondary font-mono">95%</span>
+                </div>
+                <div class="h-3 bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                  <div class="skill-progress bg-gradient-to-r from-secondary to-success h-full rounded-full" style="width: 95%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">Automation Testing</span>
+                  <span class="text-secondary font-mono">85%</span>
+                </div>
+                <div class="h-3 bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                  <div class="skill-progress bg-gradient-to-r from-secondary to-success h-full rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="text-xl font-semibold text-primary mb-6 flex items-center">
+              <i class="fas fa-code mr-3 text-secondary"></i>
+              Programming Languages
+            </h3>
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">JavaScript</span>
+                  <span class="text-secondary font-mono">80%</span>
+                </div>
+                <div class="h-3 bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                  <div class="skill-progress bg-gradient-to-r from-secondary to-success h-full rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">C#</span>
+                  <span class="text-secondary font-mono">75%</span>
+                </div>
+                <div class="h-3 bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                  <div class="skill-progress bg-gradient-to-r from-secondary to-success h-full rounded-full" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="text-xl font-semibold text-primary mb-6 flex items-center">
+              <i class="fas fa-tools mr-3 text-secondary"></i>
+              Tools & Frameworks
+            </h3>
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">Cypress</span>
+                  <span class="text-secondary font-mono">90%</span>
+                </div>
+                <div class="h-3 bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                  <div class="skill-progress bg-gradient-to-r from-secondary to-success h-full rounded-full" style="width: 90%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">JIRA</span>
+                  <span class="text-secondary font-mono">85%</span>
+                </div>
+                <div class="h-3 bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                  <div class="skill-progress bg-gradient-to-r from-secondary to-success h-full rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">Postman</span>
+                  <span class="text-secondary font-mono">80%</span>
+                </div>
+                <div class="h-3 bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                  <div class="skill-progress bg-gradient-to-r from-secondary to-success h-full rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-8">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-briefcase text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Professional Journey</h2>
+        </div>
+        
+        <div class="relative">
+          <!-- Línea de tiempo vertical -->
+          <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-secondary to-success ml-6"></div>
+          
+          <div id="experience-content" class="space-y-8 relative">
+            <!-- La experiencia se agregará aquí dinámicamente -->
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-8">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-graduation-cap text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Educational Background</h2>
+        </div>
+        <div id="education-content" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+      </section>
+
+      <section id="certifications" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-8">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-certificate text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Certifications & Training</h2>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex items-center p-4 bg-white rounded-lg shadow-sm border border-gray-50">
+              <div class="bg-blue-500/10 p-3 rounded-lg mr-4">
+                <i class="fas fa-award text-blue-500"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-800">ISTQB Foundation Level</h3>
+                <p class="text-gray-600 text-sm">In Progress - Expected: Dec 2025</p>
+              </div>
+            </div>
+            <!-- Espacio para futuras certificaciones -->
+          </div>
+        </div>
+      </section>
+
+      <section id="languages" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-8">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-globe text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Language Proficiency</h2>
+        </div>
+        <div id="languages-content" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
       </section>
     </main>
   </body>
@@ -223,7 +461,7 @@
       <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
         <p><strong class="text-secondary">Author:</strong> Mariella Lorenzo Suarez</p>
         <p><strong class="text-secondary">Version:</strong> 1.01</p>
-        <p><strong class="text-secondary">Last Updated:</strong> Sep 2024</p>
+        <p><strong class="text-secondary">Last Updated:</strong> Aug 2025</p>
       </div>
     </div>
   </footer>
