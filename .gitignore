@@ -1,13 +1,11 @@
-# Dependencies
-node_modules/
+# Sistema
+.DS_Store
 
-# IDE and Editor files
+# Editores
 .vscode/
 .idea/
 *.swp
 *.swo
-.DS_Store
 
 # Logs
 *.log
-npm-debug.log*
