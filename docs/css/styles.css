@@ -1,8 +1,8 @@
-/* Custom animations and effects */
+/* Custom animations */
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -10,20 +10,158 @@
   }
 }
 
-.animate-fade-in {
-  animation: fade-in 0.5s ease-out;
+@keyframes slide-in-right {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-/* Custom styles that can't be easily achieved with Tailwind */
-.download-btn {
-  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(16, 185, 129, 0.2),
+                0 0 10px rgba(16, 185, 129, 0.2),
+                0 0 15px rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.5),
+                0 0 20px rgba(16, 185, 129, 0.3),
+                0 0 30px rgba(16, 185, 129, 0.2);
+  }
 }
 
-.download-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+@keyframes timeline-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+  }
 }
 
+/* Timeline styles */
+.experience-item {
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.experience-item:hover .timeline-dot {
+  animation: timeline-glow 2s infinite;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 1.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #3498db, #10b981);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 1rem;
+  width: 1rem;
+  height: 1rem;
+  background: #3498db;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px #3498db;
+  transition: all 0.3s ease;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Custom styles */
 .skill-progress {
-  transition: width 1s ease-out;
+  animation: slide-in-right 1s ease-out forwards;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%);
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.15em solid #10b981;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 0.15em;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #10b981 }
+}
+
+.skill-category {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.skill-category:nth-child(1) { animation-delay: 0.2s; }
+.skill-category:nth-child(2) { animation-delay: 0.4s; }
+.skill-category:nth-child(3) { animation-delay: 0.6s; }
+
+/* Hover effects */
+.skill-bar:hover .skill-progress {
+  animation: glow 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #1a2b3c, #3498db);
+  border-radius: 5px;
+  border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #3498db, #1a2b3c);
 }
