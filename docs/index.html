@@ -3,12 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mariella - QA Engineer</title>
+    <title>Mariella Lorenzo Suarez - QA Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1a2b3c',
+              secondary: '#3498db',
+              success: '#10b981'
+            },
+            fontFamily: {
+              mono: ['Source Code Pro', 'monospace']
+            }
+          }
+        }
+      }
+    </script>
     <link rel="stylesheet" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" />
     <script src="js/scripts.js"></script>
     <meta
       name="description"
@@ -19,111 +37,325 @@
       content="QA Engineer, Mariella Lorenzo Suarez, Software Testing, Automation Testing, Manual Testing"
     />
     <meta name="author" content="Mariella Lorenzo Suarez" />
+    <!-- Typing effect library -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="js/animations.js"></script>
   </head>
 
   <body>
-    <header>
-      <h1>Test Case ID: CV-001</h1>
+    <header class="bg-gradient-to-r from-primary via-gray-800 to-primary text-white py-6 px-4 shadow-xl relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="max-w-4xl mx-auto relative z-10">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div class="flex items-center space-x-3 font-mono bg-black/30 p-2 rounded-lg">
+            <span class="text-success text-lg animate-pulse">&gt;</span>
+            <h1 class="text-xl font-bold tracking-tight">Test Case ID: CV-001</h1>
+          </div>
+          
+          <a href="data/2024.09.18 CV MLS - Short Version.pdf" download 
+             class="group flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg 
+                    transition-all duration-300 border border-white/20 hover:border-white/40 shadow-sm hover:shadow-md">
+            <i class="fas fa-file-download text-lg group-hover:scale-110 transition-transform"></i>
+            <span class="font-medium text-sm">Download CV</span>
+          </a>
+        </div>
+        
+        <div class="mt-4 bg-black/30 backdrop-blur-md rounded-lg p-4 border border-white/20 shadow-xl">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+            <div class="bg-white/5 p-2 rounded-lg">
+              <span class="text-gray-400 font-mono block mb-1">Title</span>
+              <span class="text-white/90">QA Engineer</span>
+            </div>
+            <div class="bg-white/5 p-2 rounded-lg">
+              <span class="text-gray-400 font-mono block mb-1">Author</span>
+              <span class="text-white/90">Mariella Lorenzo</span>
+            </div>
+            <div class="bg-white/5 p-2 rounded-lg">
+              <span class="text-gray-400 font-mono block mb-1">Updated</span>
+              <span class="text-white/90">Aug 2025</span>
+            </div>
+            <div class="bg-white/5 p-2 rounded-lg flex items-center justify-between">
+              <div>
+                <span class="text-gray-400 font-mono block mb-1">Status</span>
+                <span class="text-white/90">Active</span>
+              </div>
+              <span class="w-2 h-2 bg-success rounded-full animate-pulse"></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <main>
-      <section id="profile">
-        <h2>
-          <a
-            href="data/2024.09.18 CV MLS - Short Version.pdf"
-            download
-            title="Click to download my resume in PDF format">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          Title: QA Engineer - Mariella Lorenzo Suarez
-        </h2>
-        <p>
-          <strong>Objective:</strong> To provide a comprehensive overview of the
-          skills, experience, and qualifications of Mariella as a QA Engineer.
-        </p>
+    <main class="container mx-auto px-4 py-8">
+      <section id="profile" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-clipboard-check text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Test Objective</h2>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <span class="mt-1.5 text-success">✓</span>
+              <p class="text-gray-700">Validate candidate's qualifications and expertise in Quality Assurance Engineering</p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <span class="mt-1.5 text-success">✓</span>
+              <p class="text-gray-700">Assess technical proficiency in manual and automated testing methodologies</p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <span class="mt-1.5 text-success">✓</span>
+              <p class="text-gray-700">Evaluate experience with industry-standard testing tools and frameworks</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="introduction">
-        <h2>Introduction</h2>
-        <h3>Test Document Overview</h3>
-        <p>
-          This document provides a detailed overview of Mariella's skills,
-          experience, and qualifications as a QA Engineer. It includes
-          information on her technical skills, professional experience,
-          education and languages. The document aims to provide potential
-          employers with a comprehensive understanding of Mariella's
-          capabilities and expertise in the field of software testing.
-        </p>
+      <section id="introduction" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-file-alt text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Test Documentation</h2>
+        </div>
 
-        <h3>Scope</h3>
-        <p>The scope of this document includes de following sections:</p>
-        <ul>
-          <li><a href="#contact_information">Contact Information</a></li>
-          <li><a href="#summary">Summary</a></li>
-          <li><a href="#skills">Technical Skills</a></li>
-          <li><a href="#experience">Professional Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#languages">Languages</a></li>
-        </ul>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-6">
+            <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+              <h3 class="text-xl font-semibold text-primary mb-4 flex items-center">
+                <i class="fas fa-info-circle mr-2 text-secondary"></i>
+                Document Overview
+              </h3>
+              <p class="text-gray-600">
+                This comprehensive test document evaluates Mariella Lorenzo Suarez's qualifications
+                and expertise as a QA Engineer. Through detailed analysis of skills, experience,
+                and technical proficiency, it provides evidence of her capabilities in software testing
+                and quality assurance.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+              <h3 class="text-xl font-semibold text-primary mb-4 flex items-center">
+                <i class="fas fa-list-check mr-2 text-secondary"></i>
+                Test Requirements
+              </h3>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex items-start space-x-3">
+                  <span class="text-success mt-1">✓</span>
+                  <span>Technical competency validation</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <span class="text-success mt-1">✓</span>
+                  <span>Project experience assessment</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <span class="text-success mt-1">✓</span>
+                  <span>Educational background verification</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+            <h3 class="text-xl font-semibold text-primary mb-4 flex items-center">
+              <i class="fas fa-sitemap mr-2 text-secondary"></i>
+              Document Structure
+            </h3>
+            <div class="space-y-4">
+              <div class="bg-white rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
+                <a href="#contact_information" class="flex items-center space-x-3 text-gray-700 hover:text-secondary">
+                  <i class="fas fa-address-card"></i>
+                  <span>Contact Information</span>
+                </a>
+              </div>
+              <div class="bg-white rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
+                <a href="#summary" class="flex items-center space-x-3 text-gray-700 hover:text-secondary">
+                  <i class="fas fa-user"></i>
+                  <span>Professional Summary</span>
+                </a>
+              </div>
+              <div class="bg-white rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
+                <a href="#skills" class="flex items-center space-x-3 text-gray-700 hover:text-secondary">
+                  <i class="fas fa-code"></i>
+                  <span>Skills</span>
+                </a>
+              </div>
+              <div class="bg-white rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
+                <a href="#experience" class="flex items-center space-x-3 text-gray-700 hover:text-secondary">
+                  <i class="fas fa-briefcase"></i>
+                  <span>Professional Experience</span>
+                </a>
+              </div>
+              <div class="bg-white rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
+                <a href="#education" class="flex items-center space-x-3 text-gray-700 hover:text-secondary">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>Education</span>
+                </a>
+              </div>
+              <div class="bg-white rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
+                <a href="#languages" class="flex items-center space-x-3 text-gray-700 hover:text-secondary">
+                  <i class="fas fa-language"></i>
+                  <span>Language Proficiency</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="contact_information">
-        <h2>Contact Information</h2>
-        <ul id="contact-information-content"></ul>
+      <section id="contact_information" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-8">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-address-card text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Contact Details</h2>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+          <div class="grid grid-cols-1 gap-6">
+            <ul id="contact-information-content" class="space-y-4"></ul>
+          </div>
+        </div>
       </section>
 
-      <section id="summary">
-        <h2>Personal Profile</h2>
-        <p>
-          Enthusiastic QA professional with a strong foundation in manual
-          testing methodologies and actively transitioning my skills to
-          automation testing. Demonstrated initiative by building the first test
-          repository in my current role at SwagUp, using Cypress and Javascript
-          to optimize end-to-end testing processes. Thrive in collaborative
-          environments and actively seek feedback to continuously improve my
-          skills and expand my automation knowledge. I am currently dedicated to
-          achieving the ISTQB certification, which will significantly enhance my
-          expertise in software testing. Eager to contribute my technical
-          prowess to a challenging QA Engineer role and help build robust
-          software solutions.
-        </p>
+      <section id="summary" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-user-check text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Test Subject Profile</h2>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-success/10 p-2 rounded flex-shrink-0">
+                <i class="fas fa-check text-success"></i>
+              </div>
+              <div class="ml-4 flex-1">
+                <p class="text-gray-700">
+                  <span class="font-medium text-gray-900">Core Competency:</span> Enthusiastic QA professional
+                  with a strong foundation in manual testing methodologies, actively transitioning to automation testing.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="bg-success/10 p-2 rounded mt-1">
+                <i class="fas fa-check text-success"></i>
+              </div>
+              <p class="text-gray-700 flex-1">
+                <span class="font-medium text-gray-900">Key Achievement:</span> Demonstrated initiative by building
+                the first test repository at SwagUp, implementing Cypress and Javascript for optimized end-to-end testing processes.
+              </p>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="bg-success/10 p-2 rounded mt-1">
+                <i class="fas fa-check text-success"></i>
+              </div>
+              <p class="text-gray-700 flex-1">
+                <span class="font-medium text-gray-900">Professional Development:</span> Currently pursuing ISTQB
+                certification to enhance expertise in software testing methodologies and best practices.
+              </p>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="bg-success/10 p-2 rounded mt-1">
+                <i class="fas fa-check text-success"></i>
+              </div>
+              <p class="text-gray-700 flex-1">
+                <span class="font-medium text-gray-900">Soft Skills:</span> Thrives in collaborative environments,
+                actively seeks feedback, and demonstrates continuous learning and improvement mindset.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-          <li>
-            <strong>Testing Skills:</strong> Manual Testing, Automation Testing
-          </li>
-          <li><strong>Programming Languages:</strong> C#, JavaScript</li>
-          <li><strong>Tools:</strong> Cypress, JIRA, Postman</li>
-          <li><strong>Frameworks:</strong> TestNG, JUnit, Maven</li>
-          <li><strong>Web Technologies:</strong> HTML, CSS</li>
-          <li><strong>Version Control:</strong> Git</li>
-        </ul>
+      <section id="skills" class="bg-white rounded-xl shadow-lg p-6 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-3 mb-6">
+          <div class="bg-primary/10 p-2 rounded-lg">
+            <i class="fas fa-code-branch text-xl text-primary"></i>
+          </div>
+          <h2 class="text-xl font-bold text-primary">Skills</h2>
+        </div>
+        
+        <div class="space-y-6">
+          <!-- Skills Grid -->
+          <div id="skills-content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
+
+          <!-- Currently focusing on -->
+          <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+            <h4 class="text-sm font-semibold text-blue-800 mb-2 flex items-center">
+              <i class="fas fa-crosshairs mr-2"></i>
+              Current Focus Areas
+            </h4>
+            <ul class="space-y-1" id="focus-areas"></ul>
+          </div>
+        </div>
+      </section>      <section id="experience" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-8">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-briefcase text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Professional Journey</h2>
+        </div>
+        
+        <div class="relative">
+          <!-- Línea de tiempo vertical -->
+          <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-secondary to-success ml-6"></div>
+          
+          <div id="experience-content" class="space-y-8 relative">
+            <!-- La experiencia se agregará aquí dinámicamente -->
+          </div>
+        </div>
       </section>
 
-      <section id="experience">
-        <h2>Experience</h2>
-        <div id="experience-content"></div>
+      <section id="education" class="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-4 mb-8">
+          <div class="bg-primary/10 p-3 rounded-lg">
+            <i class="fas fa-graduation-cap text-2xl text-primary"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-primary">Educational Background</h2>
+        </div>
+        <div id="education-content" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
       </section>
 
-      <section id="education">
-        <h2>Education</h2>
-        <div id="education-content"></div>
+      <section id="certifications" class="bg-white rounded-xl shadow-lg p-6 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-3 mb-6">
+          <div class="bg-primary/10 p-2 rounded-lg">
+            <i class="fas fa-certificate text-xl text-primary"></i>
+          </div>
+          <h2 class="text-xl font-bold text-primary">Certifications & Training</h2>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <div id="certifications-content" class="flex flex-col space-y-4"></div>
+          <!-- El espacio para futuras certificaciones se añadirá verticalmente -->
+        </div>
       </section>
 
-      <section id="languages">
-        <h2>Languages</h2>
-        <div id="languages-content"></div>
+      <section id="languages" class="bg-white rounded-xl shadow-lg p-4 mb-8 border border-gray-100">
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="bg-primary/10 p-2 rounded-lg">
+            <i class="fas fa-globe text-xl text-primary"></i>
+          </div>
+          <h2 class="text-xl font-bold text-primary">Language Proficiency</h2>
+        </div>
+        <div id="languages-content" class="flex flex-wrap gap-3"></div>
       </section>
     </main>
   </body>
 
-  <footer class="single-line-footer">
-    <h3>Document Information</h3>
-    <p><strong>Author:</strong> Mariella Lorenzo Suarez</p>
-    <p><strong>Version:</strong> 1.01</p>
-    <p><strong>Last Updated:</strong> Sep 2024</p>
+  <footer class="bg-gray-800 text-white py-6 px-4">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+      <h3 class="font-mono text-lg mb-4 md:mb-0">Document Information</h3>
+      <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
+        <p><strong class="text-secondary">Author:</strong> Mariella Lorenzo Suarez</p>
+        <p><strong class="text-secondary">Version:</strong> 1.01</p>
+        <p><strong class="text-secondary">Last Updated:</strong> Aug 2025</p>
+      </div>
+    </div>
   </footer>
 </html>
