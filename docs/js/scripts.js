@@ -8,6 +8,30 @@ document.querySelectorAll('li a').forEach(anchor => {
     });
 });
 
+// Función para alternar la visibilidad de más habilidades
+window.toggleSkills = function(categoryIndex) {
+    const category = document.getElementById(`category-${categoryIndex}`);
+    const moreSkills = category.querySelector('.skills-more');
+    const seeMoreBtn = category.querySelector('.see-more-btn');
+    const btnText = seeMoreBtn.querySelector('span');
+    const btnIcon = seeMoreBtn.querySelector('i');
+    
+    const isHidden = moreSkills.classList.contains('hidden');
+    
+    if (isHidden) {
+        moreSkills.classList.remove('hidden');
+        btnText.textContent = 'Show less';
+        btnIcon.classList.remove('fa-chevron-down');
+        btnIcon.classList.add('fa-chevron-up');
+    } else {
+        moreSkills.classList.add('hidden');
+        const remainingCount = moreSkills.querySelectorAll('.bg-white').length;
+        btnText.textContent = `See ${remainingCount} more`;
+        btnIcon.classList.remove('fa-chevron-up');
+        btnIcon.classList.add('fa-chevron-down');
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function () {
     fetch('./data/cv.json')
         .then(response => response.json())
@@ -59,6 +83,99 @@ document.addEventListener('DOMContentLoaded', function () {
                     `).join('')}
                 </div>
             `;
+
+            // Skills Section
+            const skillsContent = document.getElementById('skills-content');
+            const focusAreas = document.getElementById('focus-areas');
+
+            // Add focus areas
+            data.skills.currently_focusing_on.forEach(focus => {
+                const li = document.createElement('li');
+                li.className = 'text-sm text-blue-600 flex items-center space-x-2';
+                li.innerHTML = `
+                    <i class="fas fa-circle text-[4px] text-blue-400"></i>
+                    <span>${focus}</span>
+                `;
+                focusAreas.appendChild(li);
+            });
+
+            const skillsIcons = {
+                'Core QA': 'vial',
+                'Automation & Scripting': 'robot',
+                'QA Tools': 'tools',
+                'Programming': 'code',
+                'Databases': 'database',
+                'DevOps & CI': 'code-branch',
+                'Methods & Practices': 'sitemap',
+                'Soft Skills': 'brain'
+            };
+
+            // Display all categories
+            data.skills.categories.forEach((categoryData, index) => {
+                const div = document.createElement('div');
+                div.className = 'skill-category bg-gray-50 rounded-lg p-4';
+                div.style.animation = `fade-in 0.5s ease-out ${index * 0.2}s forwards`;
+
+                div.className = 'bg-gray-50 rounded-lg p-4';
+                
+                // Inicialmente mostrar solo 4 items
+                const initialItems = categoryData.items.slice(0, 4);
+                const remainingItems = categoryData.items.slice(4);
+                const hasMore = remainingItems.length > 0;
+
+                const createSkillCard = (skill) => `
+                    <div class="bg-white rounded-lg p-3 shadow-sm group hover:shadow-md transition-all duration-300">
+                        <div class="flex justify-between items-start mb-2 text-sm">
+                            <div class="flex items-center space-x-2 flex-1">
+                                <span class="font-medium text-gray-700">${skill.name}</span>
+                                ${skill.note ? 
+                                    `<span class="text-xs px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full border border-blue-100 whitespace-nowrap">
+                                        ${skill.note}
+                                    </span>` 
+                                    : ''
+                                }
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div class="flex items-center space-x-1">
+                                ${Array(5).fill(0).map((_, i) => `
+                                    <div class="w-2 h-2 rounded-full transition-all duration-300 ${
+                                        i < skill.level ? 
+                                        'bg-secondary' : 
+                                        'bg-gray-200'
+                                    }"></div>
+                                `).join('')}
+                            </div>
+                            <div class="absolute top-0 left-0 w-full text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity text-center bg-white/90 py-0.5 rounded">
+                                ${data.skills.scale[skill.level]}
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                div.innerHTML = `
+                    <h3 class="text-lg font-semibold text-primary mb-4 flex items-center">
+                        <i class="fas fa-${skillsIcons[categoryData.category]} mr-2 text-secondary"></i>
+                        ${categoryData.category}
+                    </h3>
+                    <div class="space-y-3" id="category-${index}">
+                        <div class="space-y-3 skills-container">
+                            ${initialItems.map(createSkillCard).join('')}
+                        </div>
+                        ${hasMore ? `
+                            <div class="skills-more hidden space-y-3">
+                                ${remainingItems.map(createSkillCard).join('')}
+                            </div>
+                            <button onclick="toggleSkills(${index})" class="text-sm text-secondary hover:text-primary transition-colors flex items-center space-x-1 see-more-btn">
+                                <span>See ${remainingItems.length} more</span>
+                                <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                        ` : ''}
+                    </div>
+                `;
+
+                skillsContent.appendChild(div);
+            });
 
             // Experience Section
             const experienceContent = document.getElementById('experience-content');
@@ -180,6 +297,42 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 `;
                 educationContent.appendChild(article);
+            });
+
+            // Certifications Section
+            const certificationsContent = document.getElementById('certifications-content');
+            
+            data.certifications.forEach((cert, index) => {
+                const article = document.createElement('article');
+                article.className = 'flex items-center justify-between p-4 rounded-lg bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50';
+                article.style.animation = `fade-in 0.5s ease-out ${index * 0.2}s forwards`;
+                
+                const date = new Date(cert.awarded_on);
+                const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+                
+                article.innerHTML = `
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-award text-xl text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">${cert.name}</h3>
+                            <div class="flex items-center space-x-3 text-sm text-gray-600">
+                                <span class="flex items-center">
+                                    <i class="fas fa-calendar-alt mr-1"></i>
+                                    ${formattedDate}
+                                </span>
+                                <span class="flex items-center space-x-1">
+                                    <i class="fas fa-certificate mr-1 text-primary"></i>
+                                    <span class="text-primary font-medium">${cert.certificate_number}</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-sm text-gray-600">${cert.issuer}</div>
+                `;
+                
+                certificationsContent.appendChild(article);
             });
 
             // Languages Section
