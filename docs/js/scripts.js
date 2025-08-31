@@ -2,7 +2,6 @@
 document.querySelectorAll('li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
@@ -28,12 +27,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     value: `<a href="mailto:${contactInfo.email}" class="text-secondary hover:text-primary transition-colors">${contactInfo.email}</a>`
                 },
                 {
-                    icon: 'linkedin',
+                    customIcon: `<div class="bg-[#0077b5] text-white p-2 rounded-lg hover:bg-[#006399] transition-colors group w-8 h-8 flex items-center justify-center">
+                        <i class="fab fa-linkedin-in text-base group-hover:scale-110 transition-transform"></i>
+                    </div>`,
                     label: 'LinkedIn',
                     value: `<a href="https://www.linkedin.com/in/${contactInfo.linkedin}" target="_blank" class="text-secondary hover:text-primary transition-colors">/${contactInfo.linkedin}</a>`
                 },
                 {
-                    icon: 'github',
+                    customIcon: `<div class="bg-gray-900 text-white p-2 rounded-lg hover:bg-gray-800 transition-colors group w-8 h-8 flex items-center justify-center">
+                        <i class="fab fa-github text-base group-hover:scale-110 transition-transform"></i>
+                    </div>`,
                     label: 'GitHub',
                     value: `<a href="https://github.com/${contactInfo.github}" target="_blank" class="text-secondary hover:text-primary transition-colors">/${contactInfo.github}</a>`
                 },
@@ -44,17 +47,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             ];
 
-            contactInfoContent.innerHTML = contactItems.map(item => `
-                <li class="flex items-center space-x-4 p-3 rounded-lg bg-white shadow-sm border border-gray-50 hover:shadow-md transition-shadow">
-                    <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <i class="fas fa-${item.icon} text-primary"></i>
-                    </div>
-                    <div>
-                        <div class="text-sm text-gray-500">${item.label}</div>
-                        <div class="font-medium text-gray-700">${item.value}</div>
-                    </div>
-                </li>
-            `).join('');
+            contactInfoContent.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    ${contactItems.map(item => `
+                        <div class="flex items-center space-x-4 p-3 rounded-lg bg-white shadow-sm border border-gray-50 hover:shadow-md transition-shadow">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                ${item.customIcon ? item.customIcon : `<i class="fas fa-${item.icon} text-primary"></i>`}
+                            </div>
+                            <div class="font-medium text-gray-700">${item.value}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
 
             // Experience Section
             const experienceContent = document.getElementById('experience-content');
@@ -180,27 +184,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Languages Section
             const languagesContent = document.getElementById('languages-content');
-            const languageIcons = {
-                'English': 'us',
-                'Spanish': 'es',
-                'French': 'fr'
-            };
             
             data.languages.forEach((lang, index) => {
                 const article = document.createElement('article');
-                article.className = 'bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50';
+                article.className = 'flex items-center p-3 rounded-lg bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-gray-50 flex-1 min-w-[200px]';
                 article.style.animation = `fade-in 0.5s ease-out ${index * 0.2}s forwards`;
                 
                 article.innerHTML = `
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                            <span class="text-2xl">
-                                <i class="flag-icon flag-icon-${languageIcons[lang.name] || 'globe'} text-primary"></i>
-                            </span>
-                        </div>
-                        <div>
+                    <div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center mr-3">
+                        <i class="fas fa-language text-lg text-primary"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between">
                             <h3 class="font-semibold text-gray-800">${lang.name}</h3>
-                            <p class="text-secondary">${lang.level}</p>
+                            <span class="text-xs text-secondary font-medium bg-secondary/10 px-2 py-0.5 rounded">
+                                ${lang.level}
+                            </span>
                         </div>
                     </div>
                 `;
